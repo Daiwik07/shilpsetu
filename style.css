@@ -1248,3 +1248,204 @@ lotus-border {
         .loader-corner--tr { top: 24px; right: 24px; transform: scaleX(-1); }
         .loader-corner--bl { bottom: 24px; left: 24px; transform: scaleY(-1); }
         .loader-corner--br { bottom: 24px; right: 24px; transform: scale(-1); }
+
+.about-shilpsetu {
+    position: relative;
+    background: linear-gradient(160deg, #fdf6ee 0%, #faf3e8 50%, #f5ead8 100%);
+    padding: 80px 40px;
+    border-top: 1px solid rgba(212, 165, 116, 0.2);
+    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+    overflow: hidden;
+}
+
+.about-shilpsetu::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,165,116,0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.about-ornament {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #d4a574;
+    opacity: 0.5;
+    margin-bottom: 40px;
+    letter-spacing: 1rem;
+}
+
+.about-ornament--bottom {
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #d4a574;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.about-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #3d2817;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.about-heading em {
+    font-style: italic;
+    background: linear-gradient(135deg, #d4a574, #8b6f47);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.about-divider span:first-child,
+.about-divider span:last-child {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4a574);
+}
+
+.about-divider span:last-child {
+    background: linear-gradient(90deg, #d4a574, transparent);
+}
+
+.divider-diamond {
+    color: #d4a574;
+    font-size: 0.6rem;
+    flex: none !important;
+    background: none !important;
+    height: auto !important;
+    -webkit-text-fill-color: #d4a574 !important;
+}
+
+.about-body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #5a4030;
+    margin-bottom: 18px;
+}
+
+.about-body strong {
+    color: #3d2817;
+    font-weight: 600;
+}
+
+.about-body em {
+    color: #8b6f47;
+    font-style: italic;
+}
+
+.about-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 36px;
+    background: white;
+    border: 1px solid rgba(212,165,116,0.3);
+    border-radius: 16px;
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(139,111,71,0.08);
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8b6f47;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #a08060;
+    font-weight: 500;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(212,165,116,0.3);
+}
+
+.about-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.about-card {
+    background: white;
+    border: 1px solid rgba(212,165,116,0.25);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 2px 12px rgba(139,111,71,0.06);
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(139,111,71,0.15);
+    border-color: #d4a574;
+}
+
+.about-card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.about-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #3d2817;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.about-card p {
+    font-size: 0.82rem;
+    color: #7a6050;
+    line-height: 1.6;
+}
