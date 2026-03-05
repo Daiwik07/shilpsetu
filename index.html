@@ -9,6 +9,116 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <div id="shilp-loader">
+
+    <svg class="loader-corner loader-corner--tl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 58 L2 2 L58 2" stroke="#d4a574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M2 30 Q16 16 30 2" stroke="#d4a574" stroke-width="0.8" fill="none" stroke-dasharray="3 4"/>
+        <circle cx="2" cy="2" r="3" fill="#d4a574"/>
+        <circle cx="2" cy="58" r="2" fill="#d4a574" opacity="0.5"/>
+        <circle cx="58" cy="2" r="2" fill="#d4a574" opacity="0.5"/>
+    </svg>
+    <svg class="loader-corner loader-corner--tr" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 58 L2 2 L58 2" stroke="#d4a574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M2 30 Q16 16 30 2" stroke="#d4a574" stroke-width="0.8" fill="none" stroke-dasharray="3 4"/>
+        <circle cx="2" cy="2" r="3" fill="#d4a574"/>
+    </svg>
+    <svg class="loader-corner loader-corner--bl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 58 L2 2 L58 2" stroke="#d4a574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M2 30 Q16 16 30 2" stroke="#d4a574" stroke-width="0.8" fill="none" stroke-dasharray="3 4"/>
+        <circle cx="2" cy="2" r="3" fill="#d4a574"/>
+    </svg>
+    <svg class="loader-corner loader-corner--br" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 58 L2 2 L58 2" stroke="#d4a574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M2 30 Q16 16 30 2" stroke="#d4a574" stroke-width="0.8" fill="none" stroke-dasharray="3 4"/>
+        <circle cx="2" cy="2" r="3" fill="#d4a574"/>
+    </svg>
+
+    <div class="loader-particles" id="loaderParticles"></div>
+
+    <div class="loader-mandala-wrap">
+
+        <svg class="loader-mandala" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="110" cy="110" r="104" stroke="#d4a574" stroke-width="0.6" stroke-dasharray="4 6" opacity="0.4"/>
+            <circle cx="110" cy="110" r="96" stroke="#d4a574" stroke-width="1" opacity="0.25" class="draw-path"/>
+            <g opacity="0.55">
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(22.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(45 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(67.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(90 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(112.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(135 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(157.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(180 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(202.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(225 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(247.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(270 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(292.5 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(315 110 110)"/>
+                <ellipse cx="110" cy="17" rx="5" ry="12" fill="#d4a574" opacity="0.5" transform="rotate(337.5 110 110)"/>
+            </g>
+            <g stroke="#d4a574" stroke-width="0.8" opacity="0.3">
+                <line x1="110" y1="14" x2="110" y2="206"/>
+                <line x1="14" y1="110" x2="206" y2="110"/>
+                <line x1="39" y1="39" x2="181" y2="181"/>
+                <line x1="181" y1="39" x2="39" y2="181"/>
+            </g>
+            <circle cx="110" cy="110" r="74" stroke="#d4a574" stroke-width="0.8" opacity="0.2"/>
+        </svg>
+
+        <svg class="loader-mandala loader-mandala-inner" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#d4a574" stroke-width="1.2" fill="none" opacity="0.8">
+                <ellipse cx="80" cy="26" rx="9" ry="22" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(45 80 80)" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(90 80 80)" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(135 80 80)" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(180 80 80)" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(225 80 80)" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(270 80 80)" class="draw-path"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(315 80 80)" class="draw-path"/>
+            </g>
+            <g fill="#d4a574" opacity="0.12">
+                <ellipse cx="80" cy="26" rx="9" ry="22"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(45 80 80)"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(90 80 80)"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(135 80 80)"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(180 80 80)"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(225 80 80)"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(270 80 80)"/>
+                <ellipse cx="80" cy="26" rx="9" ry="22" transform="rotate(315 80 80)"/>
+            </g>
+            <circle cx="80" cy="80" r="36" stroke="#d4a574" stroke-width="1" opacity="0.35" stroke-dasharray="5 5"/>
+            <g fill="#d4a574" opacity="0.6">
+                <polygon points="80,48 84,52 80,56 76,52" />
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(45 80 80)"/>
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(90 80 80)"/>
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(135 80 80)"/>
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(180 80 80)"/>
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(225 80 80)"/>
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(270 80 80)"/>
+                <polygon points="80,48 84,52 80,56 76,52" transform="rotate(315 80 80)"/>
+            </g>
+        </svg>
+
+        <div class="loader-center-dot"></div>
+    </div>
+
+    <div class="loader-brand">
+        <h1 class="loader-title">ShilpSetu</h1>
+        <p class="loader-tagline">Bridge to Traditional Crafts</p>
+    </div>
+
+    <div class="loader-thread-wrap">
+        <div class="loader-thread-track">
+            <div class="loader-thread-fill"></div>
+            <div class="loader-thread-glow"></div>
+        </div>
+        <span class="loader-status">Weaving your experience…</span>
+    </div>
+
+</div>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <img src="http://globalschoolnet.org/gsncf/images/2026/cf2026.jpg" alt="CyberFair" style="height: 70px;">
@@ -128,8 +238,8 @@
             </ul>
         </div>
     </nav>
-        <video autoplay loop controls muted class="intro-video">
-            <source src="./intro.mov" type="video/mov">
+        <video autoplay muted loop controls src="intro.mp4" class="intro-video">
+            <source src="intro.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     <footer class="modern-footer">
@@ -141,7 +251,6 @@
         
         <div class="footer-main">
             <div class="footer-container">
-                <!-- School Section -->
                 <div class="footer-section school-section">
                     <a href="http://www.aravali.edu.in/" target="_blank" class="footer-logo-link">
                         <img src="https://www.cloudflar.info/aaravali_website/images/header-newlogo.webp" alt="Aravali International School" class="footer-logo-img">
@@ -154,7 +263,6 @@
                     </address>
                 </div>
 
-                <!-- Website Section -->
                 <div class="footer-section website-section">
                     <div class="footer-brand">
                         <span class="footer-brand-name">ShilpSetu</span>
@@ -171,7 +279,6 @@
                     </div>
                 </div>
 
-                <!-- CyberFair Section -->
                 <div class="footer-section cyberfair-section">
                     <a href="http://globalschoolnet.org/" target="_blank" class="footer-logo-link">
                         <img src="http://globalschoolnet.org/gsncf/images/2026/cf2026.jpg" alt="CyberFair 2026" class="cyberfair-logo">
@@ -195,16 +302,15 @@
         </div>
     </footer>
 
-    <!-- Mascot Widget -->
     <div class="mascot-container" id="mascot">
         <div class="speech-bubble" id="speechBubble">
-            <button class="speech-close" id="closeSpeech">&times;</button>
+            <button class="speech-close" id="closeSpeech" onclick="document.getElementById('mascot').style.display='none';">&times;</button>
             <p id="mascotMessage">🙏 Namaste! Welcome to ShilpSetu! I'm Karigar, your guide to India's beautiful handicrafts. Click on me anytime for help!</p>
         </div>
         <img src="./mascot.png" alt="Mascot Karigar" style="height: 200px;">
         </div>
     </div>
-
+    <script src="loader.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
