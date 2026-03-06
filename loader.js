@@ -1,5 +1,4 @@
 (function() {
-    // Generate particles
     const particleContainer = document.getElementById('loaderParticles');
     if (particleContainer) {
         for (let i = 0; i < 28; i++) {
@@ -24,15 +23,10 @@
             particleContainer.appendChild(p);
         }
     }
-
-
-    // Trigger SVG draw-in animations (staggered)
     const drawPaths = document.querySelectorAll('.draw-path');
     drawPaths.forEach((path, i) => {
         setTimeout(() => path.classList.add('animate'), i * 60 + 100);
     });
-
-    // Dismiss loader after content loads (or max 3.5s)
     function dismissLoader() {
         const loader = document.getElementById('shilp-loader');
         if (loader) {
