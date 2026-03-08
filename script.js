@@ -19,8 +19,8 @@ if (navbar) {
                         <span class="nav-indicator"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="Overview.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
-                        <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
+                        <li><a href="summary.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
+                        <li><a href="learning.html" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
                         <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
                     </ul>
                 </li>
@@ -51,8 +51,8 @@ if (navbar) {
                         <li><a href="aboutHandicrafts.html" class="dropdown-item"><i class="fas fa-star"></i> About Indian Handicrafters</a></li>
                         <li><a href="famoushandicrafts.html" class="dropdown-item"><i class="fas fa-bullseye"></i>Famous Handicrafts</a></li>
                         <li><a href="soulOfIndia.html" class="dropdown-item"><i class="fas fa-users"></i> Soul of India</a></li>
-                        <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Interaction 3</a></li>
-                        <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Analysis</a></li>
+                        <li><a href="gallery.html" class="dropdown-item"><i class="fas fa-users"></i> Gallery</a></li>
+                        <li><a href="shop.html" class="dropdown-item"><i class="fas fa-users"></i> Shop</a></li>
                         <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Biblography</a></li>
                     </ul>
                 </li>
@@ -434,3 +434,31 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  const items = document.querySelectorAll(".timeline-item");
+const timeline = document.querySelector(".timeline");
+
+function reveal(){
+
+let trigger = window.innerHeight * 0.85;
+
+items.forEach(item => {
+
+let top = item.getBoundingClientRect().top;
+
+if(top < trigger){
+item.classList.add("show");
+}
+
+});
+
+let timelineTop = timeline.getBoundingClientRect().top;
+
+if(timelineTop < trigger){
+timeline.classList.add("animate");
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+reveal();

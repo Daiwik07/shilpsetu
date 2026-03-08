@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Handicraft Shop</title>
+
+<link rel="stylesheet" href="shop.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<nav class="navbar" id="navbar"></nav>
+<header>
+
+<h1>Handicraft Shop</h1>
+
+<input type="text" id="search" placeholder="Search handicrafts..." onkeyup="searchProducts()">
+
+<div class="cart-icon" onclick="toggleCart()">
+<i class="fas fa-shopping-cart"></i>
+<span id="cart-count">0</span>
+</div>
+
+</header>
+
+<section class="products" id="products">
+
+<div class="product">
+<img src="images/pottery.webp" onclick="openPopup('Terracotta Pot',450,'images/pottery.webp')">
+<h2>Terracotta Pot</h2>
+<p>₹450</p>
+<button onclick="addToCart('Terracotta Pot',450,'images/pottery.jpg')">
+Add to Cart
+</button>
+</div>
+
+<div class="product">
+<img src="images/shawl.jfif" onclick="openPopup('Pashmina Shawl',1500,'images/shawl.jfif')">
+<h2>Pashmina Shawl</h2>
+<p>₹1500</p>
+<button onclick="addToCart('Pashmina Shawl',1500,'images/shawl.jfif')">
+Add to Cart
+</button>
+</div>
+
+<div class="product">
+<img src="images/wood.webp" onclick="openPopup('Wood Carving Art',900,'images/wood.webp')">
+<h2>Wood Carving Art</h2>
+<p>₹900</p>
+<button onclick="addToCart('Wood Carving Art',900,'images/wood.webp')">
+Add to Cart
+</button>
+</div>
+
+<div class="product">
+<img src="images/bamboo.jpg" onclick="openPopup('Bamboo Basket',350,'images/bamboo.jpg')">
+<h2>Bamboo Basket</h2>
+<p>₹350</p>
+<button onclick="addToCart('Bamboo Basket',350,'images/bamboo.jpg')">
+Add to Cart
+</button>
+</div>
+
+</section>
+
+
+<div class="cart" id="cart">
+
+<h2>Your Cart</h2>
+
+<div id="empty-cart">Your cart is empty 🧺</div>
+
+<ul id="cart-items"></ul>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<a href="checkout.html">
+<button class="checkout-btn">Checkout</button>
+</a>
+
+<button class="close-btn" onclick="toggleCart()">Close</button>
+
+</div>
+
+
+<div class="popup" id="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">×</span>
+
+<img id="popup-img">
+
+<h2 id="popup-title"></h2>
+
+<p id="popup-price"></p>
+
+<button onclick="popupAdd()">Add to Cart</button>
+
+</div>
+
+</div>
+<footer id="footer" class="footer"></footer>
+<script src="script.js"></script>
+<script src="shop.js"></script>
+
+</body>
+</html>
