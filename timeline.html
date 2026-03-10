@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Indian Handicrafts Timeline</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="timeline.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+<nav class="navbar" id="navbar"></nav>
+<div class="body">
+<h1 class="title">Timeline of Indian Handicrafts</h1>
+
+<div class="year-nav">
+
+<button onclick="scrollToYear('y1')">2500 BCE</button>
+<button onclick="scrollToYear('y2')">Ancient</button>
+<button onclick="scrollToYear('y3')">Medieval</button>
+<button onclick="scrollToYear('y4')">Colonial</button>
+<button onclick="scrollToYear('y5')">Independence</button>
+<button onclick="scrollToYear('y6')">Modern</button>
+
+</div>
+
+<div class="timeline">
+
+<div class="progress-line" id="progress"></div>
+
+
+<div class="timeline-item" id="y1">
+<div class="dot"></div>
+<div class="timeline-content">
+<img src="images/indus.jpg" onclick="openImage(this.src)">
+<h2>2500 BCE – Indus Valley</h2>
+<p>Pottery, bead making and metal crafts flourished in the Indus Valley Civilization.</p>
+</div>
+</div>
+
+
+<div class="timeline-item" id="y2">
+<div class="dot"></div>
+<div class="timeline-content">
+<img src="images/ancient.jpg" onclick="openImage(this.src)">
+<h2>Ancient India</h2>
+<p>Stone carving, textiles and jewelry making developed across Indian kingdoms.</p>
+</div>
+</div>
+
+
+<div class="timeline-item" id="y3">
+<div class="dot"></div>
+<div class="timeline-content">
+<img src="images/medieval.jpg" onclick="openImage(this.src)">
+<h2>Medieval Period</h2>
+<p>Mughal patronage encouraged carpets, miniature paintings and metalwork.</p>
+</div>
+</div>
+
+
+<div class="timeline-item" id="y4">
+<div class="dot"></div>
+<div class="timeline-content">
+<img src="images/colonial.jpg" onclick="openImage(this.src)">
+<h2>Colonial Era</h2>
+<p>Industrial production caused decline in many traditional crafts.</p>
+</div>
+</div>
+
+
+<div class="timeline-item" id="y5">
+<div class="dot"></div>
+<div class="timeline-content">
+<img src="images/independence.jpg" onclick="openImage(this.src)">
+<h2>Post Independence</h2>
+<p>Government initiatives helped revive Indian handicrafts.</p>
+</div>
+</div>
+
+
+<div class="timeline-item" id="y6">
+<div class="dot"></div>
+<div class="timeline-content">
+<img src="images/modern.jpg" onclick="openImage(this.src)">
+<h2>Modern Era</h2>
+<p>Digital platforms like ShilpSetu help artisans reach global audiences.</p>
+</div>
+</div>
+
+</div>
+
+
+<div id="image-popup" onclick="closeImage()">
+<img id="popup-img">
+</div>
+</div>
+<footer class="footer" id="footer"></footer>
+<script src="script.js"></script>
+<script src="timeline.js"></script>
+
+</body>
+</html>

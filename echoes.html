@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Writing Presentation – ShilpSetu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Your existing stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── Page shell ── */
+        .ppt-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-light, #faf9f6);
+        }
+
+        /* ── Presentation section ── */
+        .presentation-section {
+            flex: 1;
+            padding: 60px 40px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Section eyebrow + heading */
+        .section-eyebrow {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #d4a574;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #3d2817;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .section-heading em {
+            font-style: italic;
+            background: linear-gradient(135deg, #d4a574, #8b6f47);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ornamental divider */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 auto 18px;
+            width: min(480px, 90%);
+        }
+
+        .section-divider span {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4a574);
+        }
+
+        .section-divider span:last-child {
+            background: linear-gradient(90deg, #d4a574, transparent);
+        }
+
+        .section-divider i {
+            color: #d4a574;
+            font-size: 0.6rem;
+        }
+
+        .section-desc {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            color: #5a4030;
+            text-align: center;
+            line-height: 1.8;
+            max-width: 620px;
+            margin-bottom: 48px;
+        }
+
+        /* ── Embed wrapper ── */
+        .embed-wrapper {
+            width: min(1100px, 100%);
+            position: relative;
+        }
+
+        /* Decorative gold frame */
+        .embed-frame {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;   /* 16 : 9 */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:
+                0 0 0 4px rgba(212, 165, 116, 0.35),
+                0 0 0 8px rgba(212, 165, 116, 0.12),
+                0 24px 60px rgba(61, 40, 23, 0.22);
+            background: #1a0f08;
+        }
+
+        .embed-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Corner ornaments */
+        .embed-corner {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            border-color: #d4a574;
+            border-style: solid;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .embed-corner--tl { top: -4px; left: -4px;  border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
+        .embed-corner--tr { top: -4px; right: -4px; border-width: 3px 3px 0 0; border-radius: 0 4px 0 0; }
+        .embed-corner--bl { bottom: -4px; left: -4px;  border-width: 0 0 3px 3px; border-radius: 0 0 0 4px; }
+        .embed-corner--br { bottom: -4px; right: -4px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+
+        /* Caption below embed */
+        .embed-caption {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .embed-caption a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: #8b6f47;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        .embed-caption a:hover {
+            color: #d4a574;
+            text-decoration: underline;
+        }
+
+        .embed-caption a i {
+            margin-left: 6px;
+            font-size: 0.8rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .presentation-section {
+                padding: 40px 16px 60px;
+            }
+        }
+    </style>
+</head>
+<body class="ppt-page">
+
+    <!-- ════════════════════════════════════════════
+         NAVBAR  (exact class / id as requested)
+    ════════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-link" style="padding:0; background:none;">
+                <span class="logo-main">ShilpSetu</span>
+            </a>
+
+            <!-- Nav links -->
+            <ul class="nav-links">
+                <li class="nav-item" style="--i:1">
+                    <a href="index.html" class="nav-link">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item" style="--i:2">
+                    <a href="crafts.html" class="nav-link">
+                        <i class="fa-solid fa-paintbrush"></i> Crafts
+                    </a>
+                </li>
+                <li class="nav-item" style="--i:3">
+                    <a href="learning.html" class="nav-link">
+                        <i class="fa-solid fa-book-open"></i> Learn
+                    </a>
+                </li>
+                <li class="nav-item" style="--i:4">
+                    <a href="presentation.html" class="nav-link active">
+                        <i class="fa-solid fa-presentation-screen"></i> Presentation
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ════════════════════════════════════════════
+         PRESENTATION SECTION
+    ════════════════════════════════════════════ -->
+    <main class="presentation-section">
+
+        <span class="section-eyebrow">✦ Featured Showcase ✦</span>
+        <h1 class="section-heading">Voice &amp; <em>Creative Writing</em></h1>
+
+        <div class="section-divider">
+            <span></span>
+            <i class="fa-solid fa-diamond"></i>
+            <span></span>
+        </div>
+
+
+        <!-- Canva embed -->
+        <div class="embed-wrapper">
+            <div class="embed-frame">
+                <span class="embed-corner embed-corner--tl"></span>
+                <span class="embed-corner embed-corner--tr"></span>
+                <span class="embed-corner embed-corner--bl"></span>
+                <span class="embed-corner embed-corner--br"></span>
+
+                <iframe
+                    loading="lazy"
+                    src="https://www.canva.com/design/DAHDGC_2K0A/3V5wVggB2quby6x1M-xjcA/view?embed"
+                    allowfullscreen="allowfullscreen"
+                    allow="fullscreen"
+                    title="Voice Creative Writing Presentation by Arnav Kashyap">
+                </iframe>
+            </div>
+
+            <div class="embed-caption">
+                <a href="https://www.canva.com/design/DAHDGC_2K0A/3V5wVggB2quby6x1M-xjcA/view?utm_content=DAHDGC_2K0A&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+                   target="_blank" rel="noopener">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ════════════════════════════════════════════
+         FOOTER  (exact class / id as requested)
+    ════════════════════════════════════════════ -->
+    <footer class="footer modern-footer" id="footer">
+
+        <!-- Wave separator -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"
+                      fill="#3d2817"/>
+            </svg>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-container">
+
+                <!-- Col 1 – Brand -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="footer-brand-name">ShilpSetu</span>
+                        <p class="footer-tagline">Bridging Tradition &amp; Modernity</p>
+                    </div>
+                    <p class="footer-description">
+                        A digital bridge celebrating India's rich craft heritage — connecting artisans,
+                        learners, and admirers across the world.
+                    </p>
+                    <div class="footer-links">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        <a href="crafts.html"><i class="fa-solid fa-paintbrush"></i> Crafts</a>
+                        <a href="learning.html"><i class="fa-solid fa-book-open"></i> Learn</a>
+                    </div>
+                </div>
+
+                <!-- Col 2 – Contact -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <address class="footer-address">
+                        <p><i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@shilpsetu.in">info@shilpsetu.in</a>
+                        </p>
+                        <p><i class="fa-solid fa-location-dot"></i> India</p>
+                        <p><i class="fa-solid fa-globe"></i>
+                            <a href="index.html">shilpsetu.in</a>
+                        </p>
+                    </address>
+                </div>
+
+                <!-- Col 3 – Awards / Recognition -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Recognition</h3>
+                    <p style="color:#c4b8a8;font-size:0.88rem;line-height:1.7;max-width:240px;">
+                        Proud participant of the CyberFair &amp; Global SchoolNet initiative,
+                        celebrating student-led digital heritage projects.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 ShilpSetu. Made with <span class="heart">❤</span> for India's artisans.</p>
+                <p class="footer-credits">Designed &amp; developed by Arnav Kashyap</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Active nav link highlight
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.href === window.location.href) link.classList.add('active');
+        });
+    </script>
+
+</body>
+</html>

@@ -25,7 +25,7 @@ if (navbar) {
                     </ul>
                 </li>
                 <li class="nav-item" style="--i: 5">
-                    <a href="Narrative.html" class="nav-link">
+                    <a href="shilpsetu.html" class="nav-link">
                         <span class="nav-text">Shilpsetu</span>
                         <span class="nav-indicator"></span>
                     </a>
@@ -53,6 +53,7 @@ if (navbar) {
                         <li><a href="soulOfIndia.html" class="dropdown-item"><i class="fas fa-users"></i> Soul of India</a></li>
                         <li><a href="gallery.html" class="dropdown-item"><i class="fas fa-users"></i> Gallery</a></li>
                         <li><a href="shop.html" class="dropdown-item"><i class="fas fa-users"></i> Shop</a></li>
+                        <li><a href="timeline.html" class="dropdown-item"><i class="fas fa-users"></i> Timeline</a></li>
                         <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Biblography</a></li>
                     </ul>
                 </li>
