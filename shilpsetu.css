@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── SCROLL REVEAL ── */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -33,7 +33,7 @@ body {
 .reveal-delay-3 { transition-delay: .3s; }
 .reveal-delay-4 { transition-delay: .4s; }
 
-/* ── HERO ── */
+
 .hero {
   min-height: 100vh;
   position: relative;
@@ -47,7 +47,7 @@ body {
   background: linear-gradient(170deg, #1a0d05 0%, #2e1808 40%, #1a0d05 100%);
 }
 
-/* Animated grid lines */
+
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -62,7 +62,7 @@ body {
   to   { background-position: 60px 60px; }
 }
 
-/* Radial glow */
+
 .hero-glow {
   position: absolute;
   top: 50%; left: 50%;
@@ -78,7 +78,7 @@ body {
   50%      { transform: translate(-50%,-50%) scale(1.2); opacity: 1; }
 }
 
-/* Mandala watermark */
+
 .hero-mandala {
   position: absolute;
   top: 50%; left: 50%;
@@ -191,7 +191,7 @@ body {
   50%      { transform: scaleY(.5) translateY(8px); opacity: .4; }
 }
 
-/* ── SECTION WRAPPER ── */
+
 .section { padding: clamp(60px, 9vw, 120px) clamp(20px, 6vw, 80px); }
 .section-inner { max-width: 1200px; margin: 0 auto; }
 
@@ -231,7 +231,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* ── STORY SECTION ── */
+
 .story-section {
   background: var(--ivory);
   position: relative;
@@ -274,7 +274,7 @@ body {
   margin: 36px 0;
 }
 
-/* Visual panel for story */
+
 .story-visual {
   position: relative;
 }
@@ -341,7 +341,7 @@ body {
   letter-spacing: 1rem;
 }
 
-/* Floating badge */
+
 .story-badge {
   position: absolute;
   bottom: -20px; left: -20px;
@@ -371,7 +371,7 @@ body {
   margin-top: 2px;
 }
 
-/* ── STATS STRIP ── */
+
 .stats-strip {
   background: linear-gradient(135deg, var(--brown) 0%, #2a1808 100%);
   padding: 60px clamp(20px, 6vw, 80px);
@@ -417,7 +417,7 @@ body {
   display: block;
 }
 
-/* ── PILLARS ── */
+
 .pillars-section { background: var(--cream2); }
 .pillars-grid {
   display: grid;
@@ -470,7 +470,7 @@ body {
   margin-top: 16px;
 }
 
-/* ── CRAFT CATEGORIES ── */
+
 .crafts-section { background: var(--ivory); position: relative; overflow: hidden; }
 .crafts-section::before {
   content: '';
@@ -542,7 +542,7 @@ body {
   text-transform: uppercase;
 }
 
-/* ── MISSION / CTA ── */
+
 .mission-section {
   background: linear-gradient(160deg, #1a0d05 0%, #2e1808 50%, #1a0d05 100%);
   position: relative;
@@ -630,7 +630,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* ── TEAM / VISION ── */
+
 .vision-section { background: var(--cream2); }
 .vision-grid {
   display: grid;
@@ -685,7 +685,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Decorative horizontal rule */
+
 .ornamental-rule {
   display: flex; align-items: center; gap: 20px;
   max-width: 500px; margin: 0 auto;

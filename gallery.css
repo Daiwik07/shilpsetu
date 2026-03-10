@@ -15,7 +15,7 @@ html,body{
   cursor:none;
 }
 
-/* cursor */
+
 #curs{
   position:fixed;z-index:9999;pointer-events:none;
   transform:translate(-50%,-50%);
@@ -28,7 +28,7 @@ html,body{
   border:1px solid rgba(212,165,116,.45);
 }
 
-/* grain overlay */
+
 body::after{
   content:'';
   position:fixed;inset:0;pointer-events:none;z-index:999;
@@ -36,11 +36,11 @@ body::after{
   opacity:.038;
 }
 
-/* ── STAGE: all slides stacked, only one visible ── */
+
 #stage{
   position:fixed;
   inset:0;
-  overflow:hidden; /* absolutely no bleed */
+  overflow:hidden; 
 }
 
 .slide{
@@ -49,11 +49,11 @@ body::after{
   opacity:0;
   pointer-events:none;
   z-index:0;
-  /* NO transform — pure opacity only */
-  transition:opacity 0s; /* instant hide by default */
+  
+  transition:opacity 0s; 
 }
 
-/* The one currently showing */
+
 .slide.visible{
   opacity:1;
   pointer-events:auto;
@@ -61,7 +61,7 @@ body::after{
   transition:opacity .7s ease;
 }
 
-/* The one fading in on top */
+
 .slide.entering{
   opacity:1;
   pointer-events:auto;
@@ -69,7 +69,7 @@ body::after{
   transition:opacity .7s ease;
 }
 
-/* photo */
+
 .s-bg{
   position:absolute;inset:0;
   background-size:cover;
@@ -81,7 +81,7 @@ body::after{
   transform:scale(1.04);
 }
 
-/* overlay */
+
 .s-ov{
   position:absolute;inset:0;
   background:
@@ -89,7 +89,7 @@ body::after{
     linear-gradient(to right, rgba(15,8,4,.28) 0%, transparent 55%);
 }
 
-/* content */
+
 .s-content{
   position:absolute;bottom:0;left:0;right:0;z-index:3;
   padding:0 clamp(24px,7vw,80px) clamp(40px,7vh,70px);
@@ -102,7 +102,7 @@ body::after{
   align-items:flex-end;gap:14px;padding-bottom:6px;
 }
 
-/* content reveal */
+
 .s-left,.s-right{
   opacity:0;transform:translateY(24px);
 }
@@ -155,7 +155,7 @@ body::after{
   opacity:.45;
 }
 
-/* top bar */
+
 #bar{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;justify-content:space-between;align-items:center;
@@ -178,7 +178,7 @@ body::after{
 }
 @keyframes breathe{0%,100%{opacity:.4}50%{opacity:1}}
 
-/* progress */
+
 #prog{
   position:fixed;bottom:0;left:0;right:0;
   height:2px;z-index:200;
@@ -191,7 +191,7 @@ body::after{
   transition:width .7s cubic-bezier(.76,0,.24,1);
 }
 
-/* dots */
+
 #dots{
   position:fixed;right:clamp(14px,3.5vw,36px);top:50%;
   transform:translateY(-50%);
@@ -203,7 +203,7 @@ body::after{
   transition:height .4s ease,background .4s ease;
 }
 
-/* nav */
+
 .nav-btn{
   position:fixed;top:50%;transform:translateY(-50%);
   z-index:200;background:none;border:none;cursor:pointer;

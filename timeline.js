@@ -14,7 +14,7 @@ if(top < trigger){
 
 item.classList.add("show");
 
-/* ACTIVE NAV BUTTON */
+
 
 buttons.forEach(btn=>btn.classList.remove("active"));
 
@@ -26,7 +26,7 @@ buttons[index].classList.add("active");
 
 });
 
-/* PROGRESS LINE */
+
 
 let scrollTop = window.scrollY;
 

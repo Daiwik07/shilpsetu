@@ -64,7 +64,7 @@ if (navbar) {
                         <span class="nav-indicator"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="Overview.html" class="dropdown-item"><i class="fas fa-star"></i> Echoes</a></li>
+                        <li><a href="echoes.html" class="dropdown-item"><i class="fas fa-star"></i> Echoes</a></li>
                         <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i>Resonance</a></li>
                     </ul>
                 </li>

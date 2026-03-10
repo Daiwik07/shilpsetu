@@ -23,7 +23,7 @@ margin-bottom:30px;
 color:#5a3e2b;
 }
 
-/* NAV BUTTONS */
+
 
 .year-nav{
 text-align:center;
@@ -40,7 +40,7 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* TIMELINE */
+
 
 .timeline{
 
@@ -50,7 +50,7 @@ margin:auto;
 
 }
 
-/* PROGRESS LINE */
+
 
 .timeline::after{
 
@@ -79,7 +79,7 @@ background:#c89b3c;
 
 }
 
-/* ITEM */
+
 
 .timeline-item{
 
@@ -107,7 +107,7 @@ left:0;
 left:50%;
 }
 
-/* DOT */
+
 
 .dot{
 
@@ -131,7 +131,7 @@ box-shadow:0 0 10px #c89b3c;
 left:-10px;
 }
 
-/* CARD */
+
 
 .timeline-content{
 
@@ -158,7 +158,7 @@ cursor:pointer;
 
 }
 
-/* IMAGE POPUP */
+
 
 #image-popup{
 
@@ -188,7 +188,7 @@ border-radius:10px;
 
 }
 
-/* BACKGROUND TIMELINE LINE */
+
 
 .timeline::after{
 
@@ -206,7 +206,7 @@ background:#ddd;
 
 }
 
-/* SCROLL PROGRESS LINE */
+
 
 .progress-line{
 
@@ -233,7 +233,7 @@ transition:height 0.2s;
 
 }
 
-/* TIMELINE DOT */
+
 
 .dot{
 

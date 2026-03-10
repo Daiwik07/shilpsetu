@@ -15,7 +15,7 @@ min-height:100vh;
 
 }
 
-/* HEADER */
+
 
 header{
 
@@ -40,7 +40,7 @@ letter-spacing:1px;
 
 }
 
-/* SEARCH BAR */
+
 
 header input{
 
@@ -58,7 +58,7 @@ box-shadow:0 3px 10px rgba(0,0,0,0.2);
 
 }
 
-/* PRODUCTS GRID */
+
 
 .products{
 
@@ -72,7 +72,7 @@ gap:35px;
 
 }
 
-/* PRODUCT CARD */
+
 
 .product{
 
@@ -100,7 +100,7 @@ box-shadow:0 15px 40px rgba(0,0,0,0.35);
 
 }
 
-/* PRODUCT IMAGE */
+
 
 .product img{
 
@@ -125,7 +125,7 @@ transform:scale(1.05);
 
 }
 
-/* TITLE */
+
 
 .product h2{
 
@@ -137,7 +137,7 @@ font-size:20px;
 
 }
 
-/* PRICE */
+
 
 .product p{
 
@@ -149,7 +149,7 @@ margin-bottom:10px;
 
 }
 
-/* BUTTON */
+
 
 .product button{
 
@@ -175,7 +175,7 @@ transform:scale(1.05);
 
 }
 
-/* CART SIDEBAR */
+
 
 .cart{
 
@@ -225,7 +225,7 @@ margin-bottom:10px;
 
 }
 
-/* POPUP */
+
 
 .popup{
 
@@ -285,7 +285,7 @@ color:white;
 
 }
 
-/* CART ITEMS */
+
 
 .cart ul{
 
@@ -325,7 +325,7 @@ opacity:1;
 
 }
 
-/* CART IMAGE */
+
 
 .cart-img{
 
@@ -338,7 +338,7 @@ border-radius:6px;
 
 }
 
-/* ITEM NAME */
+
 
 .cart-name{
 
@@ -350,7 +350,7 @@ color:#5a3e2b;
 
 }
 
-/* QUANTITY BUTTONS */
+
 
 .qty-btn{
 
@@ -368,7 +368,7 @@ cursor:pointer;
 
 }
 
-/* REMOVE BUTTON */
+
 
 .remove-btn{
 
@@ -376,7 +376,7 @@ background:#d9534f;
 
 }
 
-/* EMPTY CART */
+
 
 #empty-cart{
 
@@ -388,7 +388,7 @@ margin:20px 0;
 
 }
 
-/* CHECKOUT BUTTON */
+
 
 .checkout-btn{
 
@@ -410,7 +410,7 @@ cursor:pointer;
 
 }
 
-/* CLOSE BUTTON */
+
 
 .close-btn{
 
@@ -432,7 +432,7 @@ cursor:pointer;
 
 }
 
-/* CHECKOUT PAGE */
+
 
 .checkout-container{
 
@@ -494,7 +494,7 @@ cursor:pointer;
 
 }
 
-/* ORDER PAGE */
+
 
 .order-container{
 
@@ -550,7 +550,7 @@ cursor:pointer;
 
 }
 
-/* CHECKOUT LAYOUT */
+
 
 .checkout-wrapper{
 
@@ -613,7 +613,7 @@ cursor:pointer;
 
 }
 
-/* ORDER SUMMARY */
+
 
 .order-summary{
 
@@ -645,7 +645,7 @@ border-bottom:1px solid #eee;
 
 }
 
-/* ORDER SUCCESS PAGE */
+
 
 .order-success{
 
@@ -668,7 +668,7 @@ box-shadow:0 10px 35px rgba(0,0,0,0.25);
 
 }
 
-/* SUCCESS TICK */
+
 
 .tick{
 
