@@ -9,13 +9,13 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<nav class="navbar" id="navbar"></nav>
+
 <header>
 
 <h1>Handicraft Shop</h1>
@@ -106,8 +106,17 @@ Add to Cart
 </div>
 
 </div>
-<footer id="footer" class="footer"></footer>
-<script src="script.js"></script>
+
+<div id="payment-loader" style="display:none">
+
+<div class="loader"></div>
+
+<p>Processing Payment...</p>
+
+<button type="button" onclick="processPayment()">Place Order</button>
+
+</div>
+
 <script src="shop.js"></script>
 
 </body>

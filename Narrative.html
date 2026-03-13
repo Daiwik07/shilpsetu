@@ -1,56 +1,413 @@
-<!DOCTYPE html>
-<html lang="en">
+<!i hope this works add images as you want>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShilpSetu</title>
-    <link rel="stylesheet" href="style.css">
     
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <nav class="navbar" id="navbar">
-    </nav>
-    <h1 style = "padding-top: 175px; text-align: left;">Narrative</h1>
-        <br>
-    <p style = "margin-top: 10px; text-align: left;">
-        ShilpSetu was born out of a desire to bridge the gap between traditional artisans and the modern market. The founders, <br>
-        a group of passionate individuals, recognized the immense talent and craftsmanship that existed in local communities but<br>
-        often went unnoticed. They wanted to create a platform that would empower these artisans and provide them with a sustainable<br> 
-        livelihood. With this vision in mind, ShilpSetu was launched, offering a digital marketplace where artisans could showcase <br>
-        their products and connect with customers worldwide.
-    </p>
-        <br>
-    <p style = "margin-top: 10px; text-align: left;"><img src ="vrindavan.png" style="width: 400px; height: 400px; float: right; margin-left: 20px; margin-top: -150px;">
-        The journey of ShilpSetu has been one of growth and impact. The platform has successfully connected thousands of artisans with<br>
-        customers, enabling them to sell their products and share their stories. Through ShilpSetu, artisans have been able to preserve <br>
-        their traditional crafts while also embracing modern technology to reach a wider audience. The platform has not only provided <br>
-        economic opportunities for artisans but has also fostered a sense of community and cultural exchange between artisans and customers.
-    </p>
-    <br>
-    <p style = "margin-top: 10px; text-align: left;">
-        ShilpSetu continues to evolve and expand its offerings, with a focus on sustainability and social impact. The platform is <br>
-        committed to supporting artisans in their journey towards economic empowerment while also promoting the rich cultural heritage<br>
-        of traditional craftsmanship. Through innovative features and a user-friendly interface, ShilpSetu aims to create a thriving <br>
-        ecosystem where artisans can thrive and customers can discover unique, handmade products that tell a story.
-    </p>
-        <br><br>
-        <hr>
-    <br><br>
-    <footer class="footer" id="footer">
-    </footer>
+    <meta charset="UTF-8">
+    <title>Our Story | ShilpSetu</title>
 
-    <div class="mascot-container" id="mascot">
-        <div class="speech-bubble" id="speechBubble">
-            <button class="speech-close" id="closeSpeech" onclick="document.getElementById('mascot').style.display='none';">&times;</button>
-            <p id="mascotMessage">📚 Every craft tells a story passed down through generations!</p>
-        </div>
-        <img src="./mascot.png" alt="Mascot Karigar" style="height: 200px;">
-            <div class="mascot-wave">👋</div>
-        </div>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+
+        
+
+        body {
+            background-color: #f5efe6;
+            font-family: 'Lato', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            color: #3d2a18;
+        }
+
+        .main-container {
+            width: 82%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .top-color-bar {
+            height: 8px;
+            background-color: #c0714f;
+            width: 100%;
+        }
+
+
+
+        #main-header {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 35px;
+            background-color: #f5efe6;
+        }
+
+        #main-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            color: #6b3f10;
+            margin-bottom: 5px;
+            text-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #main-header h1 span {
+            color: #c0714f;
+            font-style: italic;
+        }
+
+        .tagline {
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            color: #b08040;
+            margin-top: 0px;
+        }
+
+        .header-underline {
+            width: 100px;
+            height: 3px;
+            background-color: #c9a84c;
+            margin: 14px auto 0px auto;
+        }
+
+
+
+       
+
+        /* ------- INTRO QUOTE BOX ------- */
+
+        .big-quote {
+            background-color: #eee3d4;
+            border-left: 5px solid #c0714f;
+            border-right: 5px solid #c0714f;
+            padding: 28px 40px;
+            margin: 35px 0px 30px 0px;
+            text-align: center;
+        }
+
+        .big-quote p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 19px;
+            color: #5c3d11;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .big-quote small {
+            display: block;
+            margin-top: 10px;
+            color: #c0714f;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        
+
+        .sec-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: #6b3f10;
+            margin-bottom: 14px;
+            margin-top: 10px;
+        }
+
+        .sec-title em {
+            color: #c0714f;
+        }
+
+      
+        .title-underline {
+            width: 60px;
+            height: 2px;
+            background: #c9a84c;
+            margin-bottom: 20px;
+        }
+
+      
+
+        .para-text {
+            font-size: 15.5px;
+            line-height: 1.9;
+            color: #4a3322;
+            margin-bottom: 14px;
+        }
+
+        
+
+        .two-col-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 35px;
+        }
+
+        .two-col-table td {
+            vertical-align: top;
+            padding: 10px 25px 10px 0px;
+            width: 50%;
+        }
+
+        .two-col-table td:last-child {
+            padding-left: 25px;
+            padding-right: 0px;
+            border-left: 1px dashed #d4b896;
+        }
+
+      
+
+        .callout {
+            background: #e8d9c5;
+            border-radius: 6px;
+            padding: 20px 22px;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 15px;
+            color: #5c3d11;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        
+
+        .steps-section {
+            margin: 10px 0px 35px 0px;
+        }
+
+        .step-box {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 22px;
+        }
+
+        .step-num {
+            background-color: #c0714f;
+            color: white;
+            font-size: 18px;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #6b3f10;
+            margin: 0 0 6px 0;
+        }
+
+        .step-content p {
+            font-size: 14.5px;
+            line-height: 1.75;
+            color: #4a3322;
+            margin: 0;
+        }
+
+        
+
+        .fancy-divider {
+            text-align: center;
+            color: #c9a84c;
+            font-size: 20px;
+            letter-spacing: 8px;
+            margin: 30px 0px;
+        }
+
+   
+
+        #conclusion-box {
+            background-color: #e8d9c5;
+            border: 1px solid #d4b896;
+            border-radius: 8px;
+            padding: 38px 32px;
+            margin: 35px 0px 50px 0px;
+            text-align: center;
+        }
+
+        #conclusion-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: #6b3f10;
+            margin-bottom: 16px;
+        }
+
+        #conclusion-box p {
+            font-size: 15px;
+            line-height: 1.85;
+            color: #4a3322;
+            max-width: 600px;
+            margin: 0 auto 10px auto;
+        }
+
+        #conclusion-box .big-line {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+            font-style: italic;
+            color: #c0714f;
+            margin: 20px auto;
+            max-width: 560px;
+        }
+
+        
+
+        .bottom-color-bar {
+            height: 8px;
+            background-color: #c0714f;
+            width: 100%;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 12px;
+            color: #a08060;
+            padding: 12px;
+            background-color: #ede0d0;
+        }
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar" id="navbar"></nav>
+<div class="top-color-bar"></div>
+
+
+<div id="main-header">
+    <h1>Our Story — <span>ShilpSetu</span> 🪡</h1>
+    <p class="tagline">"The Bridge to Indian Handicrafts"</p>
+    <div class="header-underline"></div>
+</div>
+
+<div class="marquee-strip">
+    <marquee behavior="scroll" direction="left" scrollamount="3">
+        &nbsp;&nbsp;&nbsp;🌿 Pashmina Shawls – Jammu & Kashmir &nbsp;✦&nbsp; Bidri Work – Karnataka &nbsp;✦&nbsp; Bamboo Crafts – The Seven Sisters &nbsp;✦&nbsp; Rogan Art – Kutch &nbsp;✦&nbsp; Celebrating India's 3000+ Craft Traditions 🌿&nbsp;&nbsp;&nbsp;
+    </marquee>
+</div>
+
+<div class="main-container">
+
+    <br>
+
+    <div class="big-quote">
+        <p>"While a machine can produce a thousand shawls in an hour,<br>it cannot weave a single story."</p>
+        <small>— the heart of shilpsetu</small>
     </div>
 
-    <script src="script.js"></script>
+    
+    <h2 class="sec-title">✦ <em>Introduction</em></h2>
+    <div class="title-underline"></div>
+
+    
+    <table class="two-col-table">
+        <tr>
+            <td>
+                <p class="para-text">
+                    The Indian subcontinent teems with diversity and distinction, particularly in its handicrafts, which are an integral part of our cultural heritage.
+                </p>
+                <p class="para-text">
+                    From the cosy warmth of <b>Pashmina shawls</b> in Jammu and Kashmir to the meticulous <b>Bidri work</b> of Karnataka, and from the resilient <b>Bamboo crafts</b> of the Seven Sisters to the vibrant <b>Rogan art</b> of Kutch — these handmade products reflect India's unique identity.
+                </p>
+                <p class="para-text">
+                    An identity that is now at risk. 
+                </p>
+            </td>
+            <td>
+                <div class="callout">
+                    "In this fast-paced 21st-century world of machinery, the essence of handmade products is slowly diminishing into the untold aeons of our history."
+                </div>
+                <p class="para-text">
+                    This threat to handicrafts must be neutralised to uphold these timeless treasures of our heritage — because they tell stories not narrated in any kind of school textbook or curriculum.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="para-text" style="text-align:center; font-size:17px; font-family:'Playfair Display', serif; font-style:italic; color:#6b3f10;">
+        On this note, we present to you — <b>ShilpSetu</b>, the "Bridge to Indian Handicrafts". 🌉
+    </p>
+
+    <br>
+
+    <p class="para-text">
+        ShilpSetu is not just another display platform. It is a bridge — for the local artisans to the modern world. Here, we present various kinds of handicrafts, whether known or unique, whether miniature or larger-than-life. Our platform is a window — a window to the vast unknowns of Indian handicrafts.
+    </p>
+
+    
+    
+
+   
+    <h2 class="sec-title">🛠 <em>The Process</em></h2>
+    <div class="title-underline"></div>
+
+    <p class="para-text">
+        The journey from ideas to the final website was a superb mix of collaboration, review, and finalisation. Here's how we did it 👇
+    </p>
+
+    <br>
+
+    <div class="steps-section">
+
+        <div class="step-box">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <h4>Becoming the End User</h4>
+                <p>We began with a first look at the website — but not as builders. We became the "end users" and the "artists" ourselves, thinking from a layman's point of view about the content and design. Although a time-consuming process, it was a prerequisite to the final masterpiece we present to you. 🎨</p>
+            </div>
+        </div>
+
+        <div class="step-box">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <h4>The Research Phase 🔍</h4>
+                <p>We then became detectives and scoured many websites, articles, and shopping lists to extract relevant content about the handicrafts and their essence. This required collaboration, analysis, and a lot of critical thinking from the whole team.</p>
+            </div>
+        </div>
+
+        <div class="step-box">
+            <div class="step-num">3</div>
+            <div class="step-content">
+                <h4>Reframing the Content</h4>
+                <p>After research, all the content was reframed to cater to our website and help us reach the end user effectively. We wanted every word to actually mean something to the person reading it. ✍️</p>
+            </div>
+        </div>
+
+    </div>
+
+ 
+
+    <div id="conclusion-box">
+        <h2>✨ Our Conclusion</h2>
+
+        <p>
+            ShilpSetu began as a school project, but it evolved into a <b>mission</b>. As we reach the end of this journey for the International Cyberfair, we have come to a profound realisation:
+        </p>
+
+        <p class="big-line">
+            "Technology does not have to be the enemy of tradition."
+        </p>
+
+        <p>
+            Through this project, we didn't just learn how to build a website. We learned the value of <b>"Dhairya"</b> (patience) — a quality every artisan possesses. We saw that while a machine can produce a thousand shawls in an hour, it cannot weave a single story.
+        </p>
+
+        <br>
+
+        <p>
+            By documenting these <i>"untold stories"</i>, we have played a small part in ensuring that the heartbeat of Indian heritage continues to pulse in the digital age. 🙏
+        </p>
+    </div>
+
+</div>
+
+<div class="bottom-color-bar"></div>
+
+<footer class="footer" id="footer"></footer>
+<script src="script.js"></script>
 </body>
 </html>

@@ -19,7 +19,8 @@ if (navbar) {
                         <span class="nav-indicator"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="summary.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
+                        <li><a href="narrative.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
+                        <li><a href="summary.html" class="dropdown-item"><i class="fas fa-star"></i> Project Summary</a></li>
                         <li><a href="learning.html" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
                         <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
                     </ul>
@@ -38,7 +39,7 @@ if (navbar) {
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="student.html" class="dropdown-item"><i class="fas fa-star"></i> Students</a></li>
-                        <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i> Faculty</a></li>
+                        <li><a href="teacher.html" class="dropdown-item"><i class="fas fa-bullseye"></i> Faculty</a></li>
                     </ul>
                 </li>
                  <li class="nav-item" style="--i: 1">
@@ -70,20 +71,15 @@ if (navbar) {
                 </li>
                 <li class="nav-item" style="--i: 4">
                     <a href="About Us.html" class="nav-link">
-                        <span class="nav-text">Rejuvination</span>
+                        <span class="nav-text">Rejuvenation </span>
                         <span class="nav-indicator"></span>
                     </a>
                 </li>
                 <li class="nav-item" style="--i: 1">
-                    <a href="Overview.html" class="nav-link dropdown-toggle">
-                        <span class="nav-text">Palettes</span>
-                        <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
+                    <a href="help.html" class="nav-link dropdown-toggle">
+                        <span class="nav-text">Help</span>
                         <span class="nav-indicator"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="Overview.html" class="dropdown-item"><i class="fas fa-star"></i> Palate Panache</a></li>
-                        <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i>Impressions</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item" style="--i: 1">
                     <a href="Overview.html" class="nav-link dropdown-toggle">
@@ -92,23 +88,12 @@ if (navbar) {
                         <span class="nav-indicator"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="Overview.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
-                        <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
-                        <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
+                        <li><a href="preserve-crafts.html" class="dropdown-item"><i class="fas fa-star"></i> Preserve Craft</a></li>
+                        <li><a href="fair-income.html" class="dropdown-item"><i class="fas fa-bullseye"></i>Fair Income</a></li>
+                        <li><a href="digital-awareness.html" class="dropdown-item"><i class="fas fa-users"></i> Digital Awareness</a></li>
                     </ul>
                 </li>
-                <li class="nav-item" style="--i: 1">
-                    <a href="Overview.html" class="nav-link dropdown-toggle">
-                        <span class="nav-text">Downloads</span>
-                        <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
-                        <span class="nav-indicator"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="Overview.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
-                        <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
-                        <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </div>
     `;

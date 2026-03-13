@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Teachers — Soul of India Project</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="teacher.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar"></nav>
+
+
+<section class="hero">
+  <div class="hero-bg-text">OUR<br>GUIDES</div>
+  <div class="hero-top-row">
+    <div>
+      <div class="hero-eyebrow">Faculty · Mentors · Guides</div>
+      <h1 class="hero-title">THE<br><em>TEACHERS</em><br>WHO GUIDED US</h1>
+    </div>
+    <p class="hero-desc">Behind every question we dared to ask, there was a teacher who told us it was worth pursuing.</p>
+  </div>
+</section>
+
+
+<div class="strip"></div>
+
+
+<section class="teachers-section">
+
+  <div class="teachers-header r">
+    <div>
+      <div class="teachers-label">The Faculty</div>
+      <h2 class="teachers-h">THE <em>PEOPLE</em><br>WHO SHAPED THIS</h2>
+    </div>
+    <p class="teachers-sub">Each teacher brought a lens that made this project richer.</p>
+  </div>
+
+
+  <div class="teachers-grid" style="grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto;">
+
+    <div class="teacher-card r d1">
+      <div class="teacher-card-bar"></div>
+      <div class="teacher-avatar">
+        <img src="imgs/teacher1.jpg" alt="Teacher Name"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="teacher-avatar-initials" style="display:none">TN</div>
+      </div>
+      <div class="teacher-name">Teacher Name</div>
+      <div class="teacher-subject">Subject / Department</div>
+      <div class="teacher-rule"></div>
+      <p class="teacher-bio">A short bio — their area of expertise, what they mentored the team on, and what makes their perspective unique.</p>
+    </div>
+
+    <div class="teacher-card r d2">
+      <div class="teacher-card-bar"></div>
+      <div class="teacher-avatar">
+        <img src="imgs/teacher2.jpg" alt="Teacher Name"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="teacher-avatar-initials" style="display:none">TN</div>
+      </div>
+      <div class="teacher-name">Teacher Name</div>
+      <div class="teacher-subject">Subject / Department</div>
+      <div class="teacher-rule"></div>
+      <p class="teacher-bio">A short bio — their area of expertise, what they mentored the team on, and what makes their perspective unique.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="quote-band">
+  <div class="qb-eyebrow r">A Grateful Note</div>
+  <p class="qb-text r">"Good teachers don't give you answers. They give you the <strong>courage to look for them yourself.</strong>"</p>
+  <div class="qb-by r">— The Team · Soul of India Project</div>
+</section>
+
+
+<footer class="footer" id="footer"></footer>
+<script src="script.js"></script>
+<script>
+const els = document.querySelectorAll('.r');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.1 });
+els.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

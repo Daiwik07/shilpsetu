@@ -29,17 +29,29 @@
 
 <input type="text" placeholder="Phone Number" required>
 
+
 <h3>Payment Method</h3>
 
-<select required>
+<select id="payment" onchange="paymentChange()" required>
 
 <option value="">Select Payment Method</option>
-<option>UPI</option>
-<option>Credit Card</option>
-<option>Debit Card</option>
-<option>Cash on Delivery</option>
+<option value="upi">UPI</option>
+<option value="card">Credit Card</option>
+<option value="card">Debit Card</option>
+<option value="cod">Cash on Delivery</option>
 
 </select>
+
+
+<div id="upi-section" style="display:none">
+
+<input type="text" placeholder="Enter UPI ID (example@upi)">
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi-payment" class="upi-qr">
+
+<p>Scan QR to Pay</p>
+
+</div>
 
 <button type="submit">Place Order</button>
 
@@ -49,5 +61,44 @@
 
 </div>
 
+
+<script>
+
+function paymentChange(){
+
+let payment = document.getElementById("payment").value;
+let upi = document.getElementById("upi-section");
+
+if(payment === "upi"){
+
+upi.style.display="block";
+
+}else{
+
+upi.style.display="none";
+
+}
+
+}
+
+</script>
+
+<script>
+
+function processPayment(){
+
+document.getElementById("payment-loader").style.display="block";
+
+setTimeout(function(){
+
+window.location.href="order.html";
+
+},2000);
+
+}
+
+</script>
+
 </body>
+
 </html>
