@@ -3,7 +3,7 @@ const navbar = document.getElementById('navbar');
 if (navbar) {
     navbar.innerHTML = `
         <div class="nav-container">
-            <img src="http://globalschoolnet.org/gsncf/images/2026/cf2026.jpg" alt="CyberFair" style="height: 70px;">
+            <img src="cyberfair.png" alt="CyberFair" style="height: 70px;">
             <ul class="nav-links" id="navLinks">
                 <li class="nav-item" style="--i: 0">
                     <a href="index.html" class="nav-link active">
@@ -22,7 +22,7 @@ if (navbar) {
                         <li><a href="narrative.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
                         <li><a href="summary.html" class="dropdown-item"><i class="fas fa-star"></i> Project Summary</a></li>
                         <li><a href="learning.html" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
-                        <li><a href="Overview.html#artisans" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
+                        <li><a href="project-layout.html" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
                     </ul>
                 </li>
                 <li class="nav-item" style="--i: 5">
@@ -59,18 +59,13 @@ if (navbar) {
                     </ul>
                 </li>
                 <li class="nav-item" style="--i: 1">
-                    <a href="Overview.html" class="nav-link dropdown-toggle">
+                    <a href="echoes.html" class="nav-link dropdown-toggle">
                         <span class="nav-text">Untold</span>
-                        <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
                         <span class="nav-indicator"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="echoes.html" class="dropdown-item"><i class="fas fa-star"></i> Echoes</a></li>
-                        <li><a href="Overview.html#mission" class="dropdown-item"><i class="fas fa-bullseye"></i>Resonance</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item" style="--i: 4">
-                    <a href="About Us.html" class="nav-link">
+                    <a href="rejuvenation.html" class="nav-link">
                         <span class="nav-text">Rejuvenation </span>
                         <span class="nav-indicator"></span>
                     </a>

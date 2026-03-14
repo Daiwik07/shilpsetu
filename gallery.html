@@ -27,19 +27,22 @@
 <script src="script.js"></script>
 <script>
 const DATA = [
-  { first:"Priya",  last:"Sharma",  role:"Textile Artisan · Varanasi",   bio:"Her hands carry the memory of seven generations — every thread a whispered inheritance.", img:"1.jpeg", pos:"60% center" },
-  { first:"Rajan",  last:"Mehta",   role:"Pottery Master · Rajasthan",   bio:"He shapes earth into stories the rain has not yet washed away.",                           img:"2.jpeg", pos:"40% center" },
-  { first:"Ananya", last:"Bose",    role:"Silk Weaver · Mysore",         bio:"In her loom lives a language older than any alphabet.",                                    img:"3.jpeg", pos:"50% 18%"    },
-  { first:"Vikram", last:"Nair",    role:"Bronze Sculptor · Thanjavur",  bio:"He pours fire into form and calls it devotion.",                                           img:"1.jpeg", pos:"50% center" },
-  { first:"Meera",  last:"Devi",    role:"Block Printer · Jaipur",       bio:"Each stamp a heartbeat — the block remembers every garden it has ever pressed.",           img:"2.jpeg", pos:"50% 15%"    },
-  { first:"Meera",  last:"Devi",    role:"Block Printer · Jaipur",       bio:"Each stamp a heartbeat — the block remembers every garden it has ever pressed.",           img:"3.jpeg", pos:"50% 15%"    },
+  { first:"Bamboo",  last:"Basket",  role:"North East", img:"gllaery img/Bamboo Basket.jpg",},
+  { first:"Bidri",  last:"Ware",  role:"karnataka", img:"gllaery img/Bidri ware.jpeg",},
+  { first:"Blue",  last:"Pottery",  role:"Rajasthan", img:"gllaery img/Blue Pottery.jpeg",},
+  { first:"Chikankari",  last:"Embroidery",  role:"Uttar Pradesh", img:"gllaery img/Chikankari Embroidery.jpeg",},
+  { first:"Dhokra",  last:"Craft",  role:"Chhattisgarh", img:"gllaery img/Dhokra.png",},
+  { first:"Gond",  last:"Painting",  role:"Madhya Pradesh", img:"gllaery img/Gond Painting.png",},
+  { first:"Kathakali",  last:"Mask",  role:"Kerala", img:"gllaery img/Kathakali Mask.png",},
+  { first:"Pashmina",  last:"Shawl",  role:"Kashmir", img:"gllaery img/Pashmina Shawl.jpeg",},
+  { first:"Pulkari",  last:"Shawl",  role:"Punjab", img:"gllaery img/Phulkari.png",},
+  { first:"Thangka",  last:"Painting",  role:"Ladakh", img:"gllaery img/Thangka Painting.png",},
 ];
 
 const N = DATA.length;
 let cur  = 0;
 let busy = false;
 
-/* build slides */
 const stage  = document.getElementById('stage');
 const dotsEl = document.getElementById('dots');
 
@@ -47,14 +50,13 @@ const slides = DATA.map((d, i) => {
   const el = document.createElement('div');
   el.className = 'slide' + (i === 0 ? ' visible' : '');
   el.innerHTML = `
-    <div class="s-bg" style="background-image:url('${d.img}');background-position:${d.pos}"></div>
+    <div class="s-bg" style="background-image:url('${d.img}');"></div>
     <div class="s-ov"></div>
     <div class="s-content">
       <div class="s-left">
         <div class="s-num">${pad(i+1)} <span style="opacity:.35">/ ${pad(N)}</span></div>
         <div class="s-role">${d.role}</div>
         <div class="s-name">${d.first}<br><em>${d.last}</em></div>
-        <div class="s-bio">${d.bio}</div>
       </div>
       <div class="s-right">
         <div class="s-big">${pad(i+1)}</div>
@@ -63,10 +65,8 @@ const slides = DATA.map((d, i) => {
     </div>`;
   stage.appendChild(el);
 
-  /* preload images */
   if (i > 0) { const img = new Image(); img.src = d.img; }
 
-  /* dot */
   const b = document.createElement('button');
   b.className = 'dot';
   b.addEventListener('click', () => go(i));
@@ -77,7 +77,6 @@ const slides = DATA.map((d, i) => {
 
 syncUI();
 
-/* ── TRANSITION ── */
 function go(nxt) {
   if (busy) return;
   nxt = ((nxt % N) + N) % N;
@@ -87,23 +86,18 @@ function go(nxt) {
   const fromEl = slides[cur];
   const toEl   = slides[nxt];
 
-  /* bring new slide on top, fully transparent */
   toEl.classList.remove('visible');
   toEl.classList.add('entering');
 
-  /* after browser paints it (opacity 0 → 1 transition starts) */
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      /* fade out old */
       fromEl.classList.remove('visible');
-      /* fromEl now has opacity:0 via instant transition */
     });
   });
 
   cur = nxt;
   syncUI();
 
-  /* cleanup after fade completes */
   setTimeout(() => {
     fromEl.classList.remove('entering','visible');
     toEl.classList.remove('entering');
@@ -123,7 +117,6 @@ function syncUI() {
   document.getElementById('prog-fill').style.width = pct + '%';
 }
 
-/* ── INPUTS ── */
 let wAcc = 0, wT;
 window.addEventListener('wheel', e => {
   e.preventDefault();
@@ -150,7 +143,6 @@ window.addEventListener('keydown', e => {
 document.getElementById('nb-next').addEventListener('click', () => go(cur+1));
 document.getElementById('nb-prev').addEventListener('click', () => go(cur-1));
 
-/* smooth cursor */
 const curs = document.getElementById('curs');
 let mx = innerWidth/2, my = innerHeight/2, cx = mx, cy = my;
 window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
@@ -162,7 +154,6 @@ window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
   requestAnimationFrame(tick);
 })();
 
-/* auto-play */
 let auto = setInterval(() => go(cur+1), 5500);
 const stopAuto = () => clearInterval(auto);
 window.addEventListener('wheel',      stopAuto, {once:true});

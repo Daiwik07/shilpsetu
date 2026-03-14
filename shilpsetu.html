@@ -350,13 +350,11 @@
 <footer id="footer" class="footer"></footer>
 <script src="script.js"></script>
 <script>
-// Scroll-reveal
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Animated counters
 function animateCount(el, end, suffix='') {
   let start = 0, duration = 1800;
   const step = timestamp => {

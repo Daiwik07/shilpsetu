@@ -27,7 +27,7 @@ body::before{
   opacity:0.5;
 }
 
-/* ── HERO ── */
+
 .hero{
   min-height:52vh;
   background:var(--ink);
@@ -76,7 +76,7 @@ body::before{
   to{opacity:1;transform:none;}
 }
 
-/* ── STRIP ── */
+
 .strip{
   height:5px;
   background:repeating-linear-gradient(90deg,
@@ -87,7 +87,7 @@ body::before{
   );
 }
 
-/* ── TEACHERS SECTION ── */
+
 .teachers-section{
   padding:6rem 4rem;
   background:var(--chalk);
@@ -101,7 +101,7 @@ body::before{
   font-weight:600;color:var(--teal);margin-bottom:1rem;
   display:flex;align-items:center;gap:0.7rem;
 }
-.teachers-label::before{content:'◆';font-size:0.45rem;}
+.teachers-label::before{content:'â—†';font-size:0.45rem;}
 .teachers-h{
   font-family:'Bebas Neue',sans-serif;
   font-size:clamp(2.8rem,6vw,5.5rem);
@@ -114,7 +114,7 @@ body::before{
   text-align:right;padding-bottom:0.3rem;
 }
 
-/* ── TEACHER GRID ── */
+
 .teachers-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -136,7 +136,7 @@ body::before{
   border-color:rgba(10,107,107,0.25);
 }
 
-/* top accent line */
+
 .teacher-card-bar{
   position:absolute;top:0;left:0;right:0;height:3px;
   background:linear-gradient(90deg,var(--teal),var(--amber));
@@ -145,7 +145,7 @@ body::before{
 }
 .teacher-card:hover .teacher-card-bar{transform:scaleX(1);}
 
-/* avatar circle — large, photo-ready */
+
 .teacher-avatar{
   width:110px;height:110px;
   border-radius:50%;
@@ -162,7 +162,7 @@ body::before{
   width:100%;height:100%;object-fit:cover;
   display:block;
 }
-/* fallback initials shown when no img */
+
 .teacher-avatar-initials{
   font-family:'Bebas Neue',sans-serif;
   font-size:2.2rem;letter-spacing:0.05em;
@@ -182,7 +182,7 @@ body::before{
   font-weight:600;color:var(--orange);margin-bottom:1.2rem;
 }
 
-/* thin rule */
+
 .teacher-rule{
   width:32px;height:1px;background:var(--teal);
   margin:0 auto 1.2rem;
@@ -195,13 +195,13 @@ body::before{
   color:rgba(13,13,13,0.5);
 }
 
-/* ── QUOTE BAND ── */
+
 .quote-band{
   background:var(--ink);padding:5rem 4rem;text-align:center;
   position:relative;overflow:hidden;
 }
 .quote-band::before{
-  content:'❝';
+  content:'â';
   font-family:'Bebas Neue',sans-serif;font-size:25rem;
   color:rgba(255,255,255,0.02);
   position:absolute;top:-5rem;left:50%;transform:translateX(-50%);
@@ -227,7 +227,7 @@ body::before{
   position:relative;z-index:1;
 }
 
-/* ── SCROLL REVEAL ── */
+
 .r{opacity:0;transform:translateY(35px);transition:opacity 0.85s ease,transform 0.85s ease;}
 .r.on{opacity:1;transform:none;}
 .r.d1{transition-delay:0.05s;}.r.d2{transition-delay:0.1s;}

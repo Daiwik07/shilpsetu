@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Writing Presentation – ShilpSetu</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .ppt-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-light, #faf9f6);
+        }
+
+        .presentation-section {
+            flex: 1;
+            padding: 60px 40px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-eyebrow {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #d4a574;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #3d2817;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .section-heading em {
+            font-style: italic;
+            background: linear-gradient(135deg, #d4a574, #8b6f47);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 auto 18px;
+            width: min(480px, 90%);
+        }
+
+        .section-divider span {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4a574);
+        }
+
+        .section-divider span:last-child {
+            background: linear-gradient(90deg, #d4a574, transparent);
+        }
+
+        .section-divider i {
+            color: #d4a574;
+            font-size: 0.6rem;
+        }
+
+        .section-desc {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            color: #5a4030;
+            text-align: center;
+            line-height: 1.8;
+            max-width: 620px;
+            margin-bottom: 48px;
+        }
+
+        .embed-wrapper {
+            width: min(1100px, 100%);
+            position: relative;
+        }
+
+        .embed-frame {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;  
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:
+                0 0 0 4px rgba(212, 165, 116, 0.35),
+                0 0 0 8px rgba(212, 165, 116, 0.12),
+                0 24px 60px rgba(61, 40, 23, 0.22);
+            background: #1a0f08;
+        }
+
+        .embed-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .embed-corner {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            border-color: #d4a574;
+            border-style: solid;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .embed-corner--tl { top: -4px; left: -4px;  border-width: 3px 0 0 3px; border-radius: 4px 0 0 0; }
+        .embed-corner--tr { top: -4px; right: -4px; border-width: 3px 3px 0 0; border-radius: 0 4px 0 0; }
+        .embed-corner--bl { bottom: -4px; left: -4px;  border-width: 0 0 3px 3px; border-radius: 0 0 0 4px; }
+        .embed-corner--br { bottom: -4px; right: -4px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+
+        .embed-caption {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .embed-caption a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: #8b6f47;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: color 0.3s;
+        }
+
+        .embed-caption a:hover {
+            color: #d4a574;
+            text-decoration: underline;
+        }
+
+        .embed-caption a i {
+            margin-left: 6px;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body class="ppt-page">
+
+    
+    <nav class="navbar" id="navbar">
+    </nav>
+
+    
+    <main class="presentation-section">
+
+        <span class="section-eyebrow">✦ Featured Showcase ✦</span>
+        <h1 class="section-heading">Voice &amp; <em>Creative Writing</em></h1>
+
+        <div class="section-divider">
+            <span></span>
+            <i class="fa-solid fa-diamond"></i>
+            <span></span>
+        </div>
+
+
+        
+        <div class="embed-wrapper">
+            <div class="embed-frame">
+                <span class="embed-corner embed-corner--tl"></span>
+                <span class="embed-corner embed-corner--tr"></span>
+                <span class="embed-corner embed-corner--bl"></span>
+                <span class="embed-corner embed-corner--br"></span>
+
+                <iframe
+                    loading="lazy"
+                    src="https://www.canva.com/design/DAHD6j22h_A/2J-fQAAEfY-E1drHSJrCTQ/view?embed"
+                    allowfullscreen="allowfullscreen"
+                    allow="fullscreen"
+                    title="Voice Creative Writing Presentation by Arnav Kashyap">
+                </iframe>
+            </div>
+
+            <div class="embed-caption">
+                <a href="https://www.canva.com/design/DAHDGC_2K0A/3V5wVggB2quby6x1M-xjcA/view?utm_content=DAHDGC_2K0A&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+                   target="_blank" rel="noopener">
+            </div>
+        </div>
+
+    </main>
+
+    
+   <footer class="footer" id="footer"></footer>
+   <script src="script.js"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.href === window.location.href) link.classList.add('active');
+        });
+    </script>
+
+</body>
+</html>
