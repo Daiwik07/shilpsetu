@@ -55,7 +55,7 @@ if (navbar) {
                         <li><a href="gallery.html" class="dropdown-item"><i class="fas fa-users"></i> Gallery</a></li>
                         <li><a href="shop.html" class="dropdown-item"><i class="fas fa-users"></i> Shop</a></li>
                         <li><a href="timeline.html" class="dropdown-item"><i class="fas fa-users"></i> Timeline</a></li>
-                        <li><a href="bibliography.html" class="dropdown-item"><i class="fas fa-users"></i> Biblography</a></li>
+                        <li><a href="Bibliography.html" class="dropdown-item"><i class="fas fa-users"></i> Biblography</a></li>
                     </ul>
                 </li>
                 <li class="nav-item" style="--i: 1">
