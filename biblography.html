@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bibliography – Indian Handicrafts</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"/>
+  <style>
+    :root {
+      --gold:        #d4a574;
+      --gold-dark:   #8b6f47;
+      --brown-deep:  #3d2817;
+      --brown-mid:   #654321;
+      --brown-light: #a08060;
+      --cream:       #faf9f6;
+      --cream-warm:  #f5ead8;
+      --text:        #4a3728;
+      --text-muted:  #7a6050;
+      --white:       #ffffff;
+      --border:      rgba(212,165,116,0.3);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 15% 20%, rgba(212,165,116,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 85% 80%, rgba(139,111,71,0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 20px rgba(139,111,71,0.1);
+      padding: 0 2rem;
+      animation: navReveal 0.7s ease forwards;
+    }
+
+    @keyframes navReveal {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      font-style: italic;
+      background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.82rem;
+      border-radius: 50px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--gold-dark);
+      background: rgba(212,165,116,0.1);
+    }
+
+    /* ── HERO ── */
+    .breadcrumb-hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #3d2817 0%, #654321 60%, #8b4513 100%);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .breadcrumb-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(212,165,116,0.15)'/%3E%3C/svg%3E") repeat;
+    }
+
+    .breadcrumb-hero::after {
+      content: '✦ ❋ ✦';
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: rgba(212,165,116,0.4);
+      letter-spacing: 1rem;
+    }
+
+    .breadcrumb-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      font-style: italic;
+      color: var(--cream-warm);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .breadcrumb-hero .sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.85;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb-trail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb-trail a { color: rgba(212,165,116,0.8); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .breadcrumb-trail a:hover { color: var(--gold); }
+    .breadcrumb-trail .sep { color: rgba(212,165,116,0.4); font-size: 0.7rem; }
+    .breadcrumb-trail .current { color: var(--cream-warm); font-size: 0.85rem; font-weight: 500; }
+
+    /* ── MAIN ── */
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 5rem 2rem 6rem;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      text-align: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--brown-deep);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      background: linear-gradient(135deg, #d4a574, #8b6f47);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 0;
+      margin-bottom: 4rem;
+      box-shadow: 0 4px 20px rgba(139,111,71,0.07);
+    }
+
+    .stat { flex: 1; text-align: center; }
+    .stat + .stat { border-left: 1px solid var(--border); }
+
+    .stat-n {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-l {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+
+    /* ── REF GRID ── */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .ref-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 22px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ref-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .ref-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 35px rgba(139,111,71,0.14);
+      border-color: rgba(212,165,116,0.5);
+    }
+
+    .ref-card:hover::before { transform: scaleX(1); }
+
+    .ref-number {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: rgba(212,165,116,0.18);
+      line-height: 1;
+    }
+
+    .state-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(212,165,116,0.12);
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .ref-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--brown-deep);
+      margin-bottom: 10px;
+      line-height: 1.4;
+      padding-right: 30px;
+    }
+
+    .ref-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold-dark);
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-decoration: none;
+      word-break: break-all;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+      background: rgba(212,165,116,0.08);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .ref-link i { flex-shrink: 0; font-size: 0.8rem; }
+    .ref-link:hover { color: var(--brown-deep); background: rgba(212,165,116,0.18); }
+
+    /* ── FOOTER ── */
+    .footer-main {
+      background: linear-gradient(135deg, #3d2817 0%, #2a1a0f 100%);
+      padding: 40px 20px 24px;
+      margin-top: 5rem;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-style: italic;
+      background: linear-gradient(135deg, #d4a574 0%, #f4e8d8 50%, #d4a574 100%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s linear infinite;
+    }
+
+    @keyframes shimmer {
+      from { background-position: 200% center; }
+      to   { background-position: -200% center; }
+    }
+
+    .footer-tagline { color: var(--gold); font-size: 0.85rem; font-style: italic; opacity: 0.8; }
+
+    .footer-bottom {
+      background: #1a0f08;
+      padding: 16px;
+      text-align: center;
+      border-top: 1px solid rgba(212,165,116,0.15);
+    }
+
+    .footer-bottom p { color: #a09080; font-size: 0.82rem; }
+    .heart { color: #e74c3c; animation: hb 1.5s infinite; }
+    @keyframes hb { 0%,100%{transform:scale(1)}50%{transform:scale(1.15)} }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .ref-grid { grid-template-columns: 1fr; }
+      .stats-bar { flex-direction: column; gap: 20px; }
+      .stat + .stat { border-left: none; border-top: 1px solid var(--border); padding-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+</nav>
+
+<div class="breadcrumb-hero">
+  <h2>Bibliography</h2>
+  <p class="sub">Research References &amp; Sources</p>
+  <div class="breadcrumb-trail">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <a href="analysis.html">Research</a>
+    <span class="sep">›</span>
+    <span class="current">Bibliography</span>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <span class="section-eyebrow">Sources &amp; References</span>
+    <h2 class="section-heading">Handicrafts of <em>28 States</em></h2>
+    <p class="section-desc">A curated list of references for the traditional handicrafts documented across the states of India.</p>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-n">20</span>
+        <span class="stat-l">States Covered</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">20</span>
+        <span class="stat-l">Craft Traditions</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">7</span>
+        <span class="stat-l">Unique Sources</span>
+      </div>
+    </div>
+
+    <div class="ref-grid">
+
+      <div class="ref-card" style="animation-delay:0.05s">
+        <span class="ref-number">01</span>
+        <span class="state-badge">Andhra Pradesh</span>
+        <h3 class="ref-title">Kondapalli Toys</h3>
+        <a href="https://en.wikipedia.org/wiki/Kondapalli_toys" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Wikipedia
+        </a>
+      </div>
+
+      <div class="ref-card" style="animation-delay:0.10s">
+        <span class="ref-number">02</span>
+        <span class="state-badge">Arunachal Pradesh</span>
+        <h3 class="ref-title">Bamboo and Cane Craft</h3>
+        <a href="https://www.india.gov.in/topics/culture-art/handicrafts" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> India.gov.in
+        </a>
+      </div>
+
+      <div class="ref-card" style="animation-delay:0.15s">
+        <span class="ref-number">03</span>
+        <span class="state-badge">Assam</span>
+        <h3 class="ref-title">Jaapi and Cane Craft</h3>
+        <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/culture/art-and-craft.html" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Incredible India
+        </a>
+      </div>
+
+      <div class="ref-card" style="animation-delay:0.20s">
+        <span class="ref-number">04</span>
+        <span class="state-badge">Bihar</span>
+        <h3 class="ref-title">Madhubani Painting</h3>
+        <a href="https://www.craftscouncilofindia.org/madhubani-painting" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Crafts Council of India
+        </a>
+      </div>
+
+      <div class="ref-card" style="animation-delay:0.25s">
+        <span class="ref-number">05</span>
+        <span class="state-badge">Chhattisgarh</span>
+        <h3 class="ref-title">Dhokra Metal Craft</h3>
+        <a href="https://asiainch.org/craft/dhokra" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Asia InCH
+        </a>
+      </div>
+
+      <div class="ref-card" style="animation-delay:0.30s">
+        <span class="ref-number">06</span>
+        <span class="state-badge">Goa</span>
+        <h3 class="ref-title">Coconut Shell Craft</h3>
+        <a href="https://www.goa-tourism.com/crafts.html" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Goa Tourism
+        </a>
+      </div>
+
+      <div class="ref-card" style="animation-delay:0.35s">
+        <span class="ref-number">07</span>
+        <span class="state-badge">Gujarat</span>
+        <h3 class="ref-title">Bandhani Tie Dye</h3>
+        <a href="https://www.gujarattourism.com/art-culture/handicrafts.html" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Gujarat Tourism
+        </a>
+      </div>
+
+      <!-- 8 -->
+      <div class="ref-card" style="animation-delay:0.40s">
+        <span class="ref-number">08</span>
+        <span class="state-badge">Himachal Pradesh</span>
+        <h3 class="ref-title">Chamba Rumal</h3>
+        <a href="https://asiainch.org/craft/chamba-rumal" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Asia InCH
+        </a>
+      </div>
+
+      <!-- 9 -->
+      <div class="ref-card" style="animation-delay:0.45s">
+        <span class="ref-number">09</span>
+        <span class="state-badge">Karnataka</span>
+        <h3 class="ref-title">Mysore Sandalwood Carving</h3>
+        <a href="https://karnatakatourism.org" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Karnataka Tourism
+        </a>
+      </div>
+
+      <!-- 10 -->
+      <div class="ref-card" style="animation-delay:0.50s">
+        <span class="ref-number">10</span>
+        <span class="state-badge">Kerala</span>
+        <h3 class="ref-title">Nettur Petti</h3>
+        <a href="https://handicrafts.nic.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Handicrafts.nic.in
+        </a>
+      </div>
+
+      <!-- 11 -->
+      <div class="ref-card" style="animation-delay:0.55s">
+        <span class="ref-number">11</span>
+        <span class="state-badge">Madhya Pradesh</span>
+        <h3 class="ref-title">Gond Painting</h3>
+        <a href="https://asiainch.org/craft/gond-painting" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Asia InCH
+        </a>
+      </div>
+
+      <!-- 12 -->
+      <div class="ref-card" style="animation-delay:0.60s">
+        <span class="ref-number">12</span>
+        <span class="state-badge">Maharashtra</span>
+        <h3 class="ref-title">Warli Painting</h3>
+        <a href="https://indianculture.gov.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Indian Culture
+        </a>
+      </div>
+
+      <!-- 13 -->
+      <div class="ref-card" style="animation-delay:0.65s">
+        <span class="ref-number">13</span>
+        <span class="state-badge">Odisha</span>
+        <h3 class="ref-title">Pipili Applique Work</h3>
+        <a href="https://handicrafts.nic.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Handicrafts.nic.in
+        </a>
+      </div>
+
+      <!-- 14 -->
+      <div class="ref-card" style="animation-delay:0.70s">
+        <span class="ref-number">14</span>
+        <span class="state-badge">Punjab</span>
+        <h3 class="ref-title">Phulkari Embroidery</h3>
+        <a href="https://punjabtourism.gov.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Punjab Tourism
+        </a>
+      </div>
+
+      <!-- 15 -->
+      <div class="ref-card" style="animation-delay:0.75s">
+        <span class="ref-number">15</span>
+        <span class="state-badge">Rajasthan</span>
+        <h3 class="ref-title">Blue Pottery</h3>
+        <a href="https://asiainch.org/craft/blue-pottery" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Asia InCH
+        </a>
+      </div>
+
+      <!-- 16 -->
+      <div class="ref-card" style="animation-delay:0.80s">
+        <span class="ref-number">16</span>
+        <span class="state-badge">Tamil Nadu</span>
+        <h3 class="ref-title">Tanjore Painting</h3>
+        <a href="https://asiainch.org/craft/tanjore-painting" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Asia InCH
+        </a>
+      </div>
+
+      <!-- 17 -->
+      <div class="ref-card" style="animation-delay:0.85s">
+        <span class="ref-number">17</span>
+        <span class="state-badge">Telangana</span>
+        <h3 class="ref-title">Pochampally Ikat</h3>
+        <a href="https://handicrafts.nic.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Handicrafts.nic.in
+        </a>
+      </div>
+
+      <!-- 18 -->
+      <div class="ref-card" style="animation-delay:0.90s">
+        <span class="ref-number">18</span>
+        <span class="state-badge">Uttar Pradesh</span>
+        <h3 class="ref-title">Saharanpur Wood Carving</h3>
+        <a href="https://handicrafts.nic.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Handicrafts.nic.in
+        </a>
+      </div>
+
+      <!-- 19 -->
+      <div class="ref-card" style="animation-delay:0.95s">
+        <span class="ref-number">19</span>
+        <span class="state-badge">Uttarakhand</span>
+        <h3 class="ref-title">Aipan Art</h3>
+        <a href="https://uttarakhandtourism.gov.in" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Uttarakhand Tourism
+        </a>
+      </div>
+
+      <!-- 20 -->
+      <div class="ref-card" style="animation-delay:1.00s">
+        <span class="ref-number">20</span>
+        <span class="state-badge">West Bengal</span>
+        <h3 class="ref-title">Kantha Embroidery</h3>
+        <a href="https://asiainch.org/craft/kantha" target="_blank" class="ref-link">
+          <i class="bi bi-link-45deg"></i> Asia InCH
+        </a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" id="footer"></footer>
+<script src="script.js"></script>
+</body>
+</html>

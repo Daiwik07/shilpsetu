@@ -19,7 +19,7 @@ if (navbar) {
                         <span class="nav-indicator"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="narrative.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
+                        <li><a href="Narrative.html" class="dropdown-item"><i class="fas fa-star"></i> Narrative</a></li>
                         <li><a href="summary.html" class="dropdown-item"><i class="fas fa-star"></i> Project Summary</a></li>
                         <li><a href="learning.html" class="dropdown-item"><i class="fas fa-bullseye"></i>Learning</a></li>
                         <li><a href="project-layout.html" class="dropdown-item"><i class="fas fa-users"></i> Layout</a></li>
